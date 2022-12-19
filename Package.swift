@@ -10,6 +10,9 @@ let package = Package(
         .library(
             name: "MyLibrary",
             targets: ["MyLibrary"]),
+        .library(name: "RxSwift", targets: ["RxSwift"]),
+        .library(name: "RxCocoa", targets: ["RxCocoa"]),
+        .library(name: "SnapKit", targets: ["SnapKit"])
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -22,7 +25,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "MyLibrary",
-            dependencies: ["RxSwift", "RxCocoa", "SnapKit"]),
+            dependencies: []),
         .testTarget(
             name: "MyLibraryTests",
             dependencies: ["MyLibrary"]),
